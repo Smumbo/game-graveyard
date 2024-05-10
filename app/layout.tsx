@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "The Game Graveyard",
-  description: "A list of dead, at-risk, and resurrected games",
+  description: "A list of dead, at-risk, and resurrected online games",
 };
 
 export default function RootLayout({
