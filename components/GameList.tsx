@@ -12,8 +12,8 @@ export default async function GameList() {
           title = {item.title}
           status = {item.status}
           release = {new Date(item.release)}
-          shutdown = {new Date(item.shutdown)}
-          resurrection = {new Date(item.resurrection)}
+          shutdown = {item.shutdown ? new Date(item.shutdown) : null}
+          resurrection = {item.resurrection ? new Date(item.resurrection) : null}
           publisher = {item.publisher}
           platforms = {item.platforms}
           url = {item.url}
