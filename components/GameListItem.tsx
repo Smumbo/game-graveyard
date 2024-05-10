@@ -12,7 +12,7 @@ interface Game {
 export default function GameListItem(props: Game) {
   return (
     <div>
-      <p>{props.title}</p>
+      <a href={props.url}>{props.title}</a>
       <p>{props.status}</p>
       <p>{props.release.getFullYear()}</p>
       <p>{props.shutdown.getFullYear()}</p>
@@ -23,7 +23,6 @@ export default function GameListItem(props: Game) {
           <li key={platform}>{platform}</li>
         ))}
       </ul>
-      <p>{props.url}</p>
     </div>
   )
 }
