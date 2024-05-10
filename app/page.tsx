@@ -1,6 +1,7 @@
 import Image from "next/image";
-import nextConfig from "../next.config.mjs";
+import nextConfig from "@/next.config.mjs";
 import Header from "@/components/Header";
+
 const basePath = nextConfig.basePath;
 
 export default function Home() {
