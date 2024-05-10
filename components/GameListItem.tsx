@@ -18,7 +18,7 @@ export default function GameListItem(props: Game) {
       <p>{props.shutdown.getFullYear()}</p>
       <p>{props.resurrection.getFullYear()}</p>
       <p>{props.publisher}</p>
-      <ul>
+      <ul className="list-disc">
         {props.platforms.map((platform) => (
           <li key={platform}>{platform}</li>
         ))}
