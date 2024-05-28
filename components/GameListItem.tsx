@@ -18,18 +18,14 @@ export default function GameListItem(props: Game) {
       return hostname
     } catch (e) {
       console.log(url)
+      throw(e)
     }
-  }
-
-  var onlineOnlyText = ""
-  if (!props.onlineOnly) {
-    onlineOnlyText = " (online services)"
   }
 
   return (
     <div className="min-w-full">
       <p>
-        {props.title + onlineOnlyText}
+        {props.onlineOnly ? props.title: props.title + " (online services)"}
       </p>
       <p>{props.publisher}</p>
       <p>{props.status}</p>
