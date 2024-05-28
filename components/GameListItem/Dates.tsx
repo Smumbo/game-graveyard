@@ -1,10 +1,8 @@
-interface GameDates {
-  release: Date;
-  shutdown: Date | null;
-  resurrection: Date | null;
-}
-
-export default function Dates(props: GameDates) {
+export default function Dates(props: {
+  release: Date,
+  shutdown: Date | null
+  resurrection: Date | null
+}) {
   function ReleaseDate(releaseDate: Date) {
     return (
       <span title={releaseDate.toDateString()}>
@@ -15,11 +13,17 @@ export default function Dates(props: GameDates) {
 
   function ShutdownDate(shutdownDate: Date | null) {
     if (shutdownDate) {
-      return <span title={shutdownDate.toDateString()}>
-        {shutdownDate.getFullYear()}
-      </span>
+      return (
+        <span title={shutdownDate.toDateString()}>
+          {shutdownDate.getFullYear()}
+        </span>
+      )
     }
-    return <span title={new Date().toDateString()}>Now</span>
+    return (
+      <span title={new Date().toDateString()}>
+        Now
+      </span>
+    )
   }
 
   function ResurrectionDate(resurrectionDate: Date | null) {
