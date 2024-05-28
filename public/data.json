@@ -1236,7 +1236,7 @@
     "notes": "PC servers are still online in 2024"
   },
   {
-    "onlineOnly": true,
+    "onlineOnly": false,
     "title": "Dark Souls II: Scholar of the First Sin",
     "publisher": "Bandai Namco",
     "status": "Safe",
