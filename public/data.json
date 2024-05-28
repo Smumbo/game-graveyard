@@ -5192,7 +5192,7 @@
     "releaseDate": "2016-03-18",
     "shutdownDate": "2018-04-26",
     "resurrectionDate": null,
-    "urls": ["https://unrealengine.com/en-US/paragon", ""],
+    "urls": ["https://unrealengine.com/en-US/paragon"],
     "notes": "Although the game itself remains dead, all of the assets created for the game are able to be used freely."
   },
   {
@@ -5228,7 +5228,7 @@
     "releaseDate": "2013-08-13",
     "shutdownDate": null,
     "resurrectionDate": null,
-    "urls": ["http://overkillsoftware.com/games/payday-2", ""],
+    "urls": ["http://overkillsoftware.com/games/payday-2"],
     "notes": "Devs originally stated they would stop supporting the game in 2017. New content continues to be added as of 2022."
   },
   {
@@ -5240,7 +5240,7 @@
     "releaseDate": "2023-09-21",
     "shutdownDate": null,
     "resurrectionDate": null,
-    "urls": ["https://paydaythegame.com/payday3", ""],
+    "urls": ["https://paydaythegame.com/payday3"],
     "notes": null
   },
   {
@@ -6848,7 +6848,7 @@
     "releaseDate": "2023-09-14",
     "shutdownDate": null,
     "resurrectionDate": null,
-    "urls": ["https://ubisoft.com/en-us/game/the-crew/motorfest", ""],
+    "urls": ["https://ubisoft.com/en-us/game/the-crew/motorfest"],
     "notes": null
   },
   {
