@@ -8,16 +8,20 @@ export default async function GameList() {
   return (
     <main className="flex flex-col items-center justify-between p-24">
       {data.map((item: any) =>
-        <GameListItem
-          title = {item.title}
-          status = {item.status}
-          release = {new Date(item.release)}
-          shutdown = {item.shutdown ? new Date(item.shutdown) : null}
-          resurrection = {item.resurrection ? new Date(item.resurrection) : null}
-          publisher = {item.publisher}
-          platforms = {item.platforms}
-          url = {item.url}
-        />
+        <>
+          <GameListItem
+            onlineOnly = {item.onlineOnly}
+            title = {item.title}
+            status = {item.status}
+            release = {new Date(item.releaseDate)}
+            shutdown = {item.shutdownDate ? new Date(item.shutdownDate) : null}
+            resurrection = {item.resurrectionDate ? new Date(item.resurrectionDate) : null}
+            publisher = {item.publisher}
+            platforms = {item.platforms}
+            urls = {item.urls}
+          />
+          <br/>
+        </>
       )}
     </main>
   )
