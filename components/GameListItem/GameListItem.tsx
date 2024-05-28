@@ -1,3 +1,5 @@
+import Dates from "./Dates";
+
 interface Game {
   onlineOnly: boolean;
   title: string;
@@ -29,11 +31,11 @@ export default function GameListItem(props: Game) {
       </p>
       <p>{props.publisher}</p>
       <p>{props.status}</p>
-      <p>
-        <span>{props.release.getFullYear()}</span>—
-        {props.shutdown ? props.shutdown.getFullYear() : ""}
-        {props.resurrection ? " (Safe since " + props.resurrection.getFullYear() + ")" : ""}
-      </p>
+      <Dates
+        release={props.release}
+        shutdown={props.shutdown}
+        resurrection={props.resurrection}
+      />
       <ul>
         {props.platforms.map((platform) => (
           <li key={platform}>{platform}</li>
