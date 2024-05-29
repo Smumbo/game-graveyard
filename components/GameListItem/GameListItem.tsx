@@ -1,4 +1,5 @@
 import Dates from "./Dates";
+import Platforms from "./Platforms";
 
 interface Game {
   onlineOnly: boolean;
@@ -35,6 +36,9 @@ export default function GameListItem(props: Game) {
         release={props.release}
         shutdown={props.shutdown}
         resurrection={props.resurrection}
+      />
+      <Platforms
+        platforms={props.platforms}
       />
       <ul>
         {props.platforms.map((platform) => (
