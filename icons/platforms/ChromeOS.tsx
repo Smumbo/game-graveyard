@@ -1,6 +1,6 @@
 import * as React from "react"
 
-export default function ChromeOS(props: any, currentcolor: string) {
+export default function ChromeOS(props: any) {
   return (
     <svg
       data-name="katman 1"

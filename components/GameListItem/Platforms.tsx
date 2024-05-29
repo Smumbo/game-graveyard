@@ -5,7 +5,7 @@
 import ChromeOS from "@/icons/platforms/ChromeOS";
 import Linux from "@/icons/platforms/Linux";
 import Windows from "@/icons/platforms/Windows";
-import MacOS from "@/icons/platforms/macOS";
+import MacOS from "@/icons/platforms/MacOS";
 
 const iconSize = 36;
 const iconColor = "#525252";
