@@ -35,6 +35,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Windows logo"
             className="dark:invert"
             width={36}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -50,6 +51,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="macOS logo"
             className="dark:invert"
             width={36}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -65,6 +67,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Linux logo"
             className="dark:invert"
             width={36}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -80,6 +83,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Google Chrome logo"
             className="dark:invert"
             width={36}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -95,6 +99,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Android logo"
             className="dark:invert"
             width={36}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -110,6 +115,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="iOS logo"
             className="dark:invert"
             width={36}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -125,6 +131,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Meta logo"
             className="dark:invert"
             width={36}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -140,6 +147,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Windows Phone icon"
             className="dark:invert"
             width={20}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -155,6 +163,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Amazon Kindle Fire logo"
             className="dark:invert"
             width={36}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -181,6 +190,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="BlackBerry logo"
             className="dark:invert"
             width={36}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -244,6 +254,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="PlayStation logo"
             className="dark:invert"
             width={36}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -286,11 +297,12 @@ export default function Platforms(props: { platforms: string[] }) {
 
     if (hasXbox) {
       return (
-        <li key="Xbox" className="inline" title="Xbox">
+        <li key="Xbox" className="inline" title={title}>
           <Xbox
             alt="Xbox logo"
             className="dark:invert"
             width={32}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -306,6 +318,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Sega Dreamcast logo"
             className="dark:invert"
             width={36}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -321,6 +334,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="GameCube logo"
             className="dark:invert"
             width={32}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -336,6 +350,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Wii logo"
             className="dark:invert"
             width={36}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -351,6 +366,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Wii U logo"
             className="dark:invert"
             width={32}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -365,6 +381,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Nintendo Switch logo"
             className="dark:invert"
             width={32}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -380,6 +397,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Nintendo DS logo"
             className="dark:invert"
             width={42}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -394,6 +412,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Nintendo 3DS logo"
             className="dark:invert"
             width={52}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -408,6 +427,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Google Stadia logo"
             className="dark:invert"
             width={36}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
@@ -422,6 +442,7 @@ export default function Platforms(props: { platforms: string[] }) {
             alt="Amazon Luna logo"
             className="dark:invert"
             width={32}
+            height="100%"
             currentcolor={iconColor}
           />
         </li>
