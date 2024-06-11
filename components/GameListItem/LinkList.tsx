@@ -13,7 +13,7 @@ export default function LinkList(props: {links: string[]}) {
   const listItems = props.links.map(link => 
     <li key={link}>
       <a
-        className="text-sm border border-solid rounded-sm text-blue-400 border-blue-400 hover:text-blue-300 hover:border-blue-300 duration-50 bg-blue-950 mr-1 py-0.5 px-1 inline-block"
+        className="text-sm border border-solid rounded-sm text-blue-400 border-blue-400 bg-blue-950 hover:text-blue-300 hover:border-blue-300 hover:bg-blue-900 duration-50 mr-1 py-0.5 px-1 inline-block"
         href={link}
       >
         <img
