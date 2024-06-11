@@ -1,5 +1,6 @@
 import Dates from "./Dates";
-import Platforms from "./Platforms";
+import LinkList from "./LinkList";
+import PlatformList from "./PlatformList";
 
 interface Game {
   onlineOnly: boolean;
@@ -10,25 +11,14 @@ interface Game {
   resurrection: Date | null;
   publisher: string;
   platforms: string[];
-  urls: string[];
+  links: string[];
 }
 
 export default function GameListItem(props: Game) {
-  function getDomain(url: string) {
-    try {
-      const urlObject = new URL(url)
-      const hostname = urlObject.hostname;
-      return hostname
-    } catch (e) {
-      console.log(url)
-      throw(e)
-    }
-  }
-
   return (
     <div className="min-w-full">
-      <p>
-        {props.onlineOnly ? props.title: props.title + " (online services)"}
+      <p className="text-xl">
+        {props.onlineOnly ? props.title : props.title + " (online services)"}
       </p>
       <p>{props.publisher}</p>
       <p>{props.status}</p>
@@ -37,16 +27,12 @@ export default function GameListItem(props: Game) {
         shutdown={props.shutdown}
         resurrection={props.resurrection}
       />
-      <Platforms
+      <PlatformList
         platforms={props.platforms}
       />
-      <ul>
-        {props.urls.map((url) => (
-          <li key={url}>
-            <a href={url}>{getDomain(url)}</a>
-          </li>
-        ))}
-      </ul>
+      <LinkList
+        links={props.links}
+      />
     </div>
   )
 }

@@ -25,7 +25,7 @@ export default async function GameList() {
             resurrection = {item.resurrectionDate ? makeDate(item.resurrectionDate) : null}
             publisher = {item.publisher}
             platforms = {item.platforms}
-            urls = {item.urls}
+            links = {item.urls}
           />
           <br/>
         </>

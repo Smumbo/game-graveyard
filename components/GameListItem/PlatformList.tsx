@@ -1,5 +1,3 @@
-/* TODO: add web icon */
-
 import Windows from "@/icons/platforms/Windows";
 import MacOS from "@/icons/platforms/MacOS";
 import Linux from "@/icons/platforms/Linux";
@@ -25,9 +23,9 @@ import Stadia from "@/icons/platforms/Stadia";
 import Luna from "@/icons/platforms/Luna";
 
 const iconColor = "#525252";
-const iconClass = "inline pr-2"
+const iconClass = "inline mr-2"
 
-export default function Platforms(props: { platforms: string[] }) {
+export default function PlatformList(props: { platforms: string[] }) {
   const platforms = props.platforms;
 
   function MakeWindowsIcon() {
