@@ -223,7 +223,7 @@ export default function PlatformList(props: { platforms: string[] }) {
 
       if (platform.includes("Web")) {
         hasWeb = true;
-        title = "Web"
+        title = platform;
         break;
       }
     }
