@@ -13,11 +13,13 @@ export default function LinkList(props: {links: string[]}) {
   const listItems = props.links.map(link => 
     <li key={link}>
       <a
-        className="text-blue-400 text-sm border border-solid rounded-sm border-blue-400 bg-blue-950 mr-1 py-0.5 px-1 duration-50 hover:text-blue-300 hover:border-blue-300"
+        className="text-sm border border-solid rounded-sm text-blue-400 border-blue-400 hover:text-blue-300 hover:border-blue-300 duration-50 bg-blue-950 mr-1 py-0.5 px-1 inline-block"
         href={link}
       >
         <img
-          className="inline mr-1 align-middle"
+          className="inline-flex mr-1 mb-0.5"
+          width={16}
+          height={16}
           src={'http://www.google.com/s2/favicons?domain=' + link}
         />
         {getDomain(link)}
