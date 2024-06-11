@@ -1,6 +1,6 @@
 import * as React from "react"
 
-export default function WindowsMobile(props: any) {
+export default function WindowsPhone(props: any) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

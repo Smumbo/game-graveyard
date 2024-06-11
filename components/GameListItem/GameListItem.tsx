@@ -41,11 +41,6 @@ export default function GameListItem(props: Game) {
         platforms={props.platforms}
       />
       <ul>
-        {props.platforms.map((platform) => (
-          <li key={platform}>{platform}</li>
-        ))}
-      </ul>
-      <ul>
         {props.urls.map((url) => (
           <li key={url}>
             <a href={url}>{getDomain(url)}</a>

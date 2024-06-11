@@ -8,8 +8,10 @@ import Android from "@/icons/platforms/Android";
 import IOS from "@/icons/platforms/IOS";
 import Meta from "@/icons/platforms/Meta";
 import WindowsPhone from "@/icons/platforms/WindowsPhone";
+import WindowsMobile from "@/icons/platforms/WindowsMobile";
 import KindleFire from "@/icons/platforms/KindleFire";
 import BlackBerry from "@/icons/platforms/BlackBerry";
+import Web from "@/icons/platforms/Web";
 import PlayStation from "@/icons/platforms/PlayStation";
 import Xbox from "@/icons/platforms/Xbox";
 import Dreamcast from "@/icons/platforms/Dreamcast";
@@ -23,6 +25,7 @@ import Stadia from "@/icons/platforms/Stadia";
 import Luna from "@/icons/platforms/Luna";
 
 const iconColor = "#525252";
+const iconClass = "inline pr-2"
 
 export default function Platforms(props: { platforms: string[] }) {
   const platforms = props.platforms;
@@ -30,7 +33,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeWindowsIcon() {
     if (platforms.includes("PC")) {
       return (
-        <li key="PC" className="inline" title="PC (Windows)">
+        <li key="PC" className={iconClass} title="PC (Windows)">
           <Windows
             alt="Windows logo"
             className="dark:invert"
@@ -46,7 +49,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeMacOSIcon() {
     if (platforms.includes("macOS")) {
       return (
-        <li key="macOS" className="inline" title="macOS">
+        <li key="macOS" className={iconClass} title="macOS">
           <MacOS
             alt="macOS logo"
             className="dark:invert"
@@ -62,7 +65,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeLinuxIcon() {
     if (platforms.includes("Linux")) {
       return (
-        <li key="Linux" className="inline" title="Linux">
+        <li key="Linux" className={iconClass} title="Linux">
           <Linux
             alt="Linux logo"
             className="dark:invert"
@@ -78,7 +81,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeChromeOSIcon() {
     if (platforms.includes("ChromeOS")) {
       return (
-        <li key="ChromeOS" className="inline" title="ChromeOS">
+        <li key="ChromeOS" className={iconClass} title="ChromeOS">
           <ChromeOS
             alt="Google Chrome logo"
             className="dark:invert"
@@ -94,7 +97,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeAndroidIcon() {
     if (platforms.includes("Android")) {
       return (
-        <li key="Android" className="inline" title="Android">
+        <li key="Android" className={iconClass} title="Android">
           <Android
             alt="Android logo"
             className="dark:invert"
@@ -110,7 +113,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeiOSIcon() {
     if (platforms.includes("iOS")) {
       return (
-        <li key="iOS" className="inline" title="iOS">
+        <li key="iOS" className={iconClass} title="iOS">
           <IOS
             alt="iOS logo"
             className="dark:invert"
@@ -126,7 +129,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeMetaIcon() {
     if (platforms.includes("Meta Quest")) {
       return (
-        <li key="Meta" className="inline" title="Meta Quest">
+        <li key="Meta" className={iconClass} title="Meta Quest">
           <Meta
             alt="Meta logo"
             className="dark:invert"
@@ -142,7 +145,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeWindowsPhoneIcon() {
     if (platforms.includes("Windows Phone")) {
       return (
-        <li key="Windows Phone" className="inline" title="Windows Phone">
+        <li key="Windows Phone" className={iconClass} title="Windows Phone">
           <WindowsPhone
             alt="Windows Phone icon"
             className="dark:invert"
@@ -155,10 +158,25 @@ export default function Platforms(props: { platforms: string[] }) {
     }
     return null;
   }
+  function MakeWindowsMobileIcon() {
+    if (platforms.includes("Windows Mobile")) {
+      return (
+        <li key="Windows Mobile" className={iconClass} title="Windows Mobile">
+          <WindowsMobile
+            alt="Windows Phone icon"
+            className="dark:invert"
+            width={24}
+            height="100%"
+            currentcolor={iconColor}
+          />
+        </li>
+      )
+    }
+  }
   function MakeKindleFireIcon() {
     if (platforms.includes("Kindle Fire")) {
       return (
-        <li key="Kindle Fire" className="inline" title="Amazon Kindle Fire">
+        <li key="Kindle Fire" className={iconClass} title="Amazon Kindle Fire">
           <KindleFire
             alt="Amazon Kindle Fire logo"
             className="dark:invert"
@@ -185,9 +203,38 @@ export default function Platforms(props: { platforms: string[] }) {
 
     if (hasBlackberry) {
       return (
-        <li key="BlackBerry" className="inline" title={title}>
+        <li key="BlackBerry" className={iconClass} title={title}>
           <BlackBerry
             alt="BlackBerry logo"
+            className="dark:invert"
+            width={36}
+            height="100%"
+            currentcolor={iconColor}
+          />
+        </li>
+      )
+    }
+    return null;
+  }
+  function MakeWebIcon() {
+    var hasWeb = false;
+    var title = "";
+
+    for (let i = 0; i < platforms.length; i++) {
+      var platform = platforms[i];
+
+      if (platform.includes("Web")) {
+        hasWeb = true;
+        title = "Web"
+        break;
+      }
+    }
+
+    if (hasWeb) {
+      return (
+        <li key="Web" className={iconClass} title={title}>
+          <Web
+            alt="Globe icon"
             className="dark:invert"
             width={36}
             height="100%"
@@ -249,7 +296,7 @@ export default function Platforms(props: { platforms: string[] }) {
 
     if (hasPlaystation) {
       return (
-        <li key="PlayStation" className="inline" title={title}>
+        <li key="PlayStation" className={iconClass} title={title}>
           <PlayStation
             alt="PlayStation logo"
             className="dark:invert"
@@ -297,7 +344,7 @@ export default function Platforms(props: { platforms: string[] }) {
 
     if (hasXbox) {
       return (
-        <li key="Xbox" className="inline" title={title}>
+        <li key="Xbox" className={iconClass} title={title}>
           <Xbox
             alt="Xbox logo"
             className="dark:invert"
@@ -313,7 +360,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeDreamcastIcon() {
     if (platforms.includes("Dreamcast")) {
       return (
-        <li key="Dreamcast" className="inline" title="Sega Dreamcast">
+        <li key="Dreamcast" className={iconClass} title="Sega Dreamcast">
           <Dreamcast
             alt="Sega Dreamcast logo"
             className="dark:invert"
@@ -329,7 +376,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeGameCubeIcon() {
     if (platforms.includes("GameCube")) {
       return (
-        <li key="GameCube" className="inline" title="GameCube">
+        <li key="GameCube" className={iconClass} title="GameCube">
           <GameCube
             alt="GameCube logo"
             className="dark:invert"
@@ -345,7 +392,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeWiiIcon() {
     if (platforms.includes("Wii")) {
       return (
-        <li key="Wii" className="inline" title="Wii">
+        <li key="Wii" className={iconClass} title="Wii">
           <Wii
             alt="Wii logo"
             className="dark:invert"
@@ -361,7 +408,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeWiiUIcon() {
     if (platforms.includes("Wii U")) {
       return (
-        <li key="WiiU" className="inline" title="Wii U">
+        <li key="WiiU" className={iconClass} title="Wii U">
           <WiiU
             alt="Wii U logo"
             className="dark:invert"
@@ -376,7 +423,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeSwitchIcon() {
     if (platforms.includes("Switch")) {
       return (
-        <li key="Switch" className="inline" title="Nintendo Switch">
+        <li key="Switch" className={iconClass} title="Nintendo Switch">
           <Switch
             alt="Nintendo Switch logo"
             className="dark:invert"
@@ -392,7 +439,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeDSIcon() {
     if (platforms.includes("DS")) {
       return (
-        <li key="NDS" className="inline" title="Nintendo DS">
+        <li key="NDS" className={iconClass} title="Nintendo DS">
           <NDS
             alt="Nintendo DS logo"
             className="dark:invert"
@@ -407,7 +454,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function Make3DSIcon() {
     if (platforms.includes("3DS")) {
       return (
-        <li key="3DS" className="inline" title="Nintendo 3DS">
+        <li key="3DS" className={iconClass} title="Nintendo 3DS">
           <N3DS
             alt="Nintendo 3DS logo"
             className="dark:invert"
@@ -422,7 +469,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeStadiaIcon() {
     if (platforms.includes("Stadia")) {
       return (
-        <li key="Stadia" className="inline" title="Google Stadia">
+        <li key="Stadia" className={iconClass} title="Google Stadia">
           <Stadia
             alt="Google Stadia logo"
             className="dark:invert"
@@ -437,7 +484,7 @@ export default function Platforms(props: { platforms: string[] }) {
   function MakeLunaIcon() {
     if (platforms.includes("Luna")) {
       return (
-        <li key="Luna" className="inline" title="Amazon Luna">
+        <li key="Luna" className={iconClass} title="Amazon Luna">
           <Luna
             alt="Amazon Luna logo"
             className="dark:invert"
@@ -463,8 +510,11 @@ export default function Platforms(props: { platforms: string[] }) {
       {MakeiOSIcon()}
       {MakeMetaIcon()}
       {MakeWindowsPhoneIcon()}
+      {MakeWindowsMobileIcon()}
       {MakeKindleFireIcon()}
       {MakeBlackBerryIcon()}
+
+      {MakeWebIcon()}
 
       {/* Consoles */}
       {MakePlayStationIcon()}
