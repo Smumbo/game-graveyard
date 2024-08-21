@@ -9,27 +9,26 @@ export default function LinkList(props: {links: string[]}) {
     }
   }
 
-  const listItems = props.links.map(link => 
-    <li key={link}>
-      <a
-        className="text-sm border border-solid rounded-sm text-blue-400 border-blue-400 bg-blue-950 hover:text-blue-300 hover:border-blue-300 hover:bg-blue-900 duration-50 mr-1 py-0.5 px-1 inline-block"
-        href={link}
-      >
-        <img
-          className="inline-flex mr-1 mb-0.5"
-          width={16}
-          height={16}
-          src={'https://www.google.com/s2/favicons?domain=' + link}
-          alt={"favicon"}
-        />
-        {getDomain(link)}
-      </a>
-    </li>
-  )
-
   return (
     <ul className="flex flex-wrap items-center">
-      {listItems}
+      {props.links.map((link) => (
+        <li key={link}>
+          <a
+              className="text-sm border border-solid rounded-sm text-blue-400 border-blue-400 bg-blue-950 hover:text-blue-300 hover:border-blue-300 hover:bg-blue-900 duration-50 mr-1 py-0.5 px-1 inline-block"
+              href={link}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+                className="inline-flex mr-1 mb-0.5"
+                width={16}
+                height={16}
+                src={'https://www.google.com/s2/favicons?domain=' + link}
+                alt={"favicon"}
+            />
+            {getDomain(link)}
+          </a>
+        </li>
+      ))}
     </ul>
   )
 }
