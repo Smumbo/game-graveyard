@@ -20,7 +20,8 @@ export default function LinkList(props: {links: string[]}) {
           className="inline-flex mr-1 mb-0.5"
           width={16}
           height={16}
-          src={'http://www.google.com/s2/favicons?domain=' + link}
+          src={'https://www.google.com/s2/favicons?domain=' + link}
+          alt={"favicon"}
         />
         {getDomain(link)}
       </a>
