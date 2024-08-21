@@ -496,7 +496,7 @@ export default function PlatformList(props: { platforms: string[] }) {
   }
 
   return (
-    <ul className="flex flex-row">
+    <ol className="flex flex-row">
       {/* Desktop operating systems */}
       {MakeWindowsIcon()}
       {MakeMacOSIcon()}
@@ -530,6 +530,6 @@ export default function PlatformList(props: { platforms: string[] }) {
       {/* Streaming platforms */}
       {MakeStadiaIcon()}
       {MakeLunaIcon()}
-    </ul>
+    </ol>
   )
 }
