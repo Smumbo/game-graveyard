@@ -2,8 +2,7 @@ export default function LinkList(props: {links: string[]}) {
   function getDomain(url: string) {
     try {
       const urlObject = new URL(url)
-      const hostname = urlObject.hostname;
-      return hostname
+      return urlObject.hostname
     } catch (e) {
       console.log(url)
       throw(e)
